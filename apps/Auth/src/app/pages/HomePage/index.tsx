@@ -6,7 +6,7 @@ export function HomePage() {
   return (
     <>
       <Auth />
-      <span>HomePage </span>
+      <span>hehehehehehehe </span>
     </>
   );
 }
