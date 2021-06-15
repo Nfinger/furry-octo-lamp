@@ -1,0 +1,26 @@
+{
+  "name": "reggora",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Nfinger <nfinger1020@gmail.com>",
+  "homepage": "https://github.com/nfingerGigster/flow-mp-template#readme",
+  "license": "ISC",
+  "main": "lib/reggora.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfingerGigster/flow-mp-template.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/nfingerGigster/flow-mp-template/issues"
+  }
+}
