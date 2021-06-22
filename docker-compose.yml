@@ -4,8 +4,6 @@ services:
   auth:
     container_name: auth
     build: apps/Auth
-    networks:
-      - local-network
     environment:
       - NODE_ENV=development
     ports:
@@ -15,8 +13,6 @@ services:
   home:
     container_name: home
     build: apps/home
-    networks:
-      - local-network
     environment:
       - NODE_ENV=development
     ports:
@@ -30,11 +26,6 @@ services:
       - ./assets:/var/www
     ports:
       - "8888:80"
-    networks:
-      - local-network
     depends_on:
       - home
       - auth
-
-networks:
-  local-network:
