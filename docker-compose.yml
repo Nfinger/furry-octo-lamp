@@ -1,0 +1,40 @@
+version: '2'
+
+services:
+  auth:
+    container_name: auth
+    build: apps/Auth
+    networks:
+      - local-network
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3050:3000"
+    command: yarn dev
+
+  home:
+    container_name: home
+    build: apps/home
+    networks:
+      - local-network
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3051:3000"
+    command: yarn dev
+
+  micro-frontend-nginx:
+    container_name: micro-frontend-nginx
+    build: nginx
+    volumes:
+      - ./assets:/var/www
+    ports:
+      - "8888:80"
+    networks:
+      - local-network
+    depends_on:
+      - home
+      - auth
+
+networks:
+  local-network:
